@@ -1,0 +1,60 @@
+" What I have
+•	I have questions/answers captured from different stakeholders(Roles) for Wrapper API -  WrapperAPISpec_Requirement.csv - requirements
+•	I have WSDL for the target wrapper - service.wsdl.
+
+What I want
+•	I want you to refer to Technical Requirements Captured in the  WrapperAPISpec_Requirement.csv. I want  technical requirements captured in csv for all sections (do not skip any critical ) to generate techSpec.md
+•	I want you to refer to Business Requirement Captured in the WrapperAPISpec_Requirement.csv. I want  business requirements captured in csv for all sections (do not skip any critical ) to generate brdSpec.md
+•	I want you to to refer to wsdl - service.wsdl and WrapperAPISpec_Requirement.csv to understand the operations and data types to improvise the brdSpec.md.
+•	If I have business requirement and I have TEST SUITE cases available, then you should generate Business logic in the code from brdSpec.md
+•	The step above is critical because it will be reviewed by BA/ PO to make sure its comprehensively covering the targeted wrapperAPI Business requirement.
+•	I want you to create the docker file to support generated code deployment.
+•	I want you to create master_prompt.md and the phase wise plans (Phase_1_Plan.md - to Phase_10_Plan.md) to orchestrate the above steps to generate the code for the Wrapper API.
+•	I want you to create separate folder "Output" with improvised phase wise planned md files and master_prompt.md for the same.
+
+Target outcome
+•   AI will generate the code phase wise, progressively for the Wrapper API based on the above details captured.
+•	Human(API-Factory Team) in the loop will review and refactor generated code in a improvision loop till the outcome benchmark is met(e.g:90 percent requirement)
+•	AI will generate the docker file which is based on the enterprise docker standards
+•	AI will generate Artefacts like Architecture Diagrams, Sequence Diagram, State Diagram using #svg_master_prompt.md
+•	AI will generate API Documentation as per the Open Api specification.
+•	AI will generate Comprehencive Playwright Test Suite positive, negative, edge, performance, and business logic scenarios. Generate production-ready test cases that validate all business requirements and ensure API reliability. You will generate test cases based on #BrdSpec.md and the generated code.
+•	AI will generate txt file with pipe seprated data based on Playwright Test Suite scenarios, which will have mock data for each scenario. This txt will be input to the generated Playwright test cases. File name - <Use Artifact Name from #file: WrapperAPISpec_Requirement.csv>_TestData.txt. Generated test cases should be comprehencive. Analyse the generated java source code and #file:brdSpec.md carefully and generate all possible test cases . Also include business logic and flaky testcases and generate scenarios with proper descriptions.
+
+
+Phase Implementation Plans
+- `Phase_1_Plan.md` - Foundation & Project Structure
+- `Phase_2_Plan.md` - Data Models & DTOs  
+- `Phase_3_Plan.md` - Core Business Logic & Services
+- `Phase_4_Plan.md` - SOAP Integration & Gateway Layer
+- `Phase_5_Plan.md` - REST Controllers & API Layer
+- `Phase_6_Plan.md` - Configuration & Security Implementation
+- `Phase_7_Plan.md` - Testing & Quality Assurance
+- `Phase_8_Plan.md` - Architecture Diagrams & Visual Documentation
+- `Phase_9_Plan.md` - API Documentation & Developer Portal Integration
+- `Phase_10_Plan.md` - Comprehensive Playwright Test Suite Generation
+
+
+
+Phase Completion Criteria
+- Code compiles without warnings
+- All tests pass (unit + integration)
+- Security scan shows no critical issues
+- Documentation coverage 100% for public APIs
+
+
+Enterprise Standards Compliance
+- Generate the code Must-Have Implementation Standards
+- Complete CSV Coverage: Every section from WrapperAPISpec_V*.csv must be implemented
+- Documentation Standards: Professional-grade technical and API documentation
+- Code Quality: Enterprise development standards with comprehensive JavaDoc
+- Test Coverage: Minimum 80% unit test coverage with integration testing
+- Security Validation: No critical vulnerabilities in security assessment
+- Follow Spring Boot best practices
+- Implement proper error handling patterns
+
+
+
+All the prompts required above should follow the effectivePromptTemplate.md guideline for prompt generation.
+I want you to generate all the prompts in Github Copilot Agentic mode for the Wrapper API based on the above details captured.
+Discuss if any doubts.
